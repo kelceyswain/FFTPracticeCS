@@ -57,3 +57,5 @@ Console.WriteLine(String.Join("\t", dft.outValues));
 // Add up the errors and see how we did
 double e = CompareSignals(inputSamples, dft.outValues);
 Console.WriteLine(e);
+
+WavFile w = new WavFile(@"C:\bathtub.wav");
