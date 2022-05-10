@@ -3,19 +3,19 @@ using System.Numerics;
 
 public class DFT
 {
-	public double[] realValues;
-	public Complex[] complexValues;
+    public double[] realValues;
+    public Complex[] complexValues;
     public double[] outValues;
     private double twopi = Math.PI * 2.0;
 
-	public DFT(double[] inputArray)
-	{
-		realValues = inputArray;
+    public DFT(double[] inputArray)
+    {
+        realValues = inputArray;
         complexValues = new Complex[realValues.Length];
         outValues = new double[realValues.Length];
-	}
+    }
 
-	public void ForwardDFT()
+    public void ForwardDFT()
     {        
         int N = realValues.Length;
         // temporary buffer
@@ -42,10 +42,10 @@ public class DFT
             }
             X[i] = X[i] / N;
         }
-		complexValues = X;
+        complexValues = X;
     }
 
-	public void InverseDFT()
+    public void InverseDFT()
     {
         // Must have made the complex values first!
         int N = realValues.Length;
