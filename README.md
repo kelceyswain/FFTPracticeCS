@@ -1,4 +1,6 @@
 # FFTPracticeCS
 Practicing C# with Fourier Transforms
 
-A working DFT and iDFT are in place so far, with the aim of making an interface for that and then writing a drop-in replacement FFT based on Cooley-Tukey.
+What better way to practice C# than to make a simple FFT bit of code which detects the note C#?
+
+Because this is a learning experience I have not used any third-party libraries for the WAV file or FFT implementation but instead done it by hand. Pardon the wheel-reinvention, but it was a useful experience.
