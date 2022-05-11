@@ -9,7 +9,9 @@ public class WavFile
     public int SampleRate { get; private set; }
     public int Channels { get; private set; }
     public int BitDepth { get; private set; }
+    public int NumSamples { get; private set;}
     public string FileName { get; private set; }
+    public double[] SampleBuffer { get; private set; }
 
     public WavFile (string wavFileLocation)
     {
@@ -67,6 +69,7 @@ public class WavFile
 
         // I only need one channel to analyse so I will just take channel 1
         int bufferSize = (dataSize * 8) / (Channels * BitDepth);
+        NumSamples = bufferSize;
         // Lets just work with doubles for now and not worry about 8-bit
         double[] buffer = new double[bufferSize];
         for (int i = 0; i < bufferSize; i++)
@@ -87,5 +90,6 @@ public class WavFile
                 //TODO
             }
         }
+        SampleBuffer = buffer;
     }
 }

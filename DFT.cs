@@ -3,14 +3,15 @@ using System.Numerics;
 
 public class DFT
 {
+    int FftSize { get; set; }
     public double[] realValues;
     public Complex[] complexValues;
     public double[] outValues;
     private double twopi = Math.PI * 2.0;
 
-    public DFT(double[] inputArray)
+    public DFT(int fSize)
     {
-        realValues = inputArray;
+        realValues = new double[fSize];
         complexValues = new Complex[realValues.Length];
         outValues = new double[realValues.Length];
     }
